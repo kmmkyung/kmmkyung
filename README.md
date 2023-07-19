@@ -2,4 +2,4 @@
 
 👉 contact 👈<br/>
 ✉️E-mail : 01aldrn10@gmail.com | 01aldrn_10@naver.com <br/>
-💬Notion : www.notion.so/kmmkyung
+💬velog : https://velog.io/@kmmkyung
