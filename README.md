@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
     <img src="https://img.shields.io/badge/Jquery-0769AD?style=flat-square&logo=jquery&logoColor=white">
     <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black">
-    <!-- <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white"> -->
+    <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white">
   <h3> 🛠️ Tool 🛠️ </h3>
     <img src="https://img.shields.io/badge/Github-181717?style=flat-square&logo=github&logoColor=white">
     <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white">
@@ -33,7 +33,7 @@
 <div>
   <h3>📖 Portfolio</h3>
   
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=LOFI-PJ&theme=omni)](https://github.com/kmmkyung/PJ-LOFI)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-LOFI&theme=omni)](https://github.com/kmmkyung/PJ-LOFI)
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=ZORA-PJ&theme=omni)](https://github.com/kmmkyung/ZORA-PJ)
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=EDIAY-PJ&theme=omni)](https://github.com/kmmkyung/EDIAY-PJ)
 </div>
