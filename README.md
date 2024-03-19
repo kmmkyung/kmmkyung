@@ -1,6 +1,4 @@
-
 [header](https://capsule-render.vercel.app/api?type=transparent%&text=💖%20Hi!%20I'm%20Min%20Kyung%20💖&fontColor=000000&align=center&animation=twinkling)
-
 <p align=center> <b>안녕하세요.</b><br/><b>방문해주셔서 감사합니다!😎</b></br>공부할 수 있게 도와준 모든분들께 고마워요!🥰</p>
 <div align=center> 
   <a href="https://github.com/kmmkyung"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fkmmkyung&count_bg=%23000000&title_bg=%23000000&icon=github.svg&icon_color=%23FFFFFF&title=Github&edge_flat=false"/></a>
