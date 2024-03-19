@@ -35,6 +35,6 @@
   
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-Dalba&theme=omni)](https://github.com/kmmkyung/PJ-Dalba)
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-LOFI&theme=omni)](https://github.com/kmmkyung/PJ-LOFI)
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=ZORA-PJ&theme=omni)](https://github.com/kmmkyung/ZORA-PJ)
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=EDIAY-PJ&theme=omni)](https://github.com/kmmkyung/EDIAY-PJ)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-ZORA&theme=omni)](https://github.com/kmmkyung/PJ-ZORA)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-EDIAY&theme=omni)](https://github.com/kmmkyung/PJ-EDIAY)
 </div>
