@@ -32,9 +32,8 @@
 <hr>
 <div>
   <h3>📖 Portfolio</h3>
-  
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-Dalba&theme=omni)](https://github.com/kmmkyung/PJ-Dalba)
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-LOFI&theme=omni)](https://github.com/kmmkyung/PJ-LOFI)
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-ZORA&theme=omni)](https://github.com/kmmkyung/PJ-ZORA)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-Dalba&theme=omni)](https://github.com/kmmkyung/PJ-Dalba)
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=kmmkyung&repo=PJ-EDIAY&theme=omni)](https://github.com/kmmkyung/PJ-EDIAY)
 </div>
