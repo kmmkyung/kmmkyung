@@ -81,6 +81,10 @@ export default function Header() {
   const headerLogoRef = useRef<HTMLDivElement>(null);
   const menuItemRef = useRef<HTMLLIElement[]>([]);
 
+  function windowTop(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   // menuItem을 menuItemRef에 넣기 (ref에 함수를 넣으면 마운트될때 자동호출된다.)
   const setMenuItem = (item:HTMLLIElement | null, index:number )=>{
     if (item) {
@@ -101,8 +105,6 @@ export default function Header() {
       
       menuItem.innerHTML = ""; // 초기화
       valueWords.forEach((ele)=>{
-        console.log(ele, index);
-        
         const span = document.createElement("span");
         span.className = "menu-word";
         if( location.pathname !== "/" && index === 1 ){
@@ -128,7 +130,7 @@ export default function Header() {
   return (
     <HeaderElement>
       <HeaderInner>
-        <HeaderLogo ref={headerLogoRef}/>
+        <HeaderLogo ref={headerLogoRef} onClick={windowTop}/>
         <Nav>
         { location.pathname === "/" ?
           <NavList>

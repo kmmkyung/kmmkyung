@@ -5,7 +5,7 @@ export interface IProjectData {
   boxImageAlt?: string,
   boxText_1?: string,
   boxText_2?: string,
-  subText: string,
+  info: string,
   title: string,
   stack: string[],
   mediaQuery: string[],
