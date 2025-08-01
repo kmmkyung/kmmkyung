@@ -12,6 +12,7 @@
     <img src="https://img.shields.io/badge/Jquery-0769AD?style=flat-square&logo=jquery&logoColor=white">
     <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black">
     <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white">
+    <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=next.js&logoColor=white">
   <h3> 🛠️ Tool 🛠️ </h3>
     <img src="https://img.shields.io/badge/Github-181717?style=flat-square&logo=github&logoColor=white">
     <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white">
