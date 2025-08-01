@@ -27,6 +27,17 @@ const GlobalStyle = createGlobalStyle`
     --max-width: 1200px;
     --default-padding: 0 min(3.5vw, 50px);
   }
+
+.br_mobile{
+  display: none;
+  } 
+
+@media (max-width: 768px) {
+  .br_mobile {
+    display: block;
+  }
+}
+
 `;
 
 export default GlobalStyle;

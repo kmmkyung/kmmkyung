@@ -53,10 +53,15 @@ const ProjectList = styled.div`
   padding: 0 10rem;
 `;
 
-const Section3 = styled.section``
+const Section3 = styled.section``;
 
-const Section4 = styled.section``
+const Section3Content = styled.div`
+`;
 
+const Section4 = styled.section``;
+
+const Section4Content = styled.div`
+`;
 
 export default function Home(){
   const projectDateReverse = [...projectDate].reverse();
@@ -82,6 +87,30 @@ export default function Home(){
           </ProjectList>
         </Section2Inner>
       </Section2>
+      <Section3>
+        <Inner>
+          <Section3Content>
+            <h3>✨안녕하세요✨</h3>
+            <p>
+              김민경의 포토폴리오 사이트 입니다.<br />
+              <br />
+              프론트엔드를 공부하고 있습니다.<br />
+              방문해주셔서 감사합니다.
+            </p>
+          </Section3Content>
+        </Inner>
+      </Section3>
+      <Section4>
+        <Inner>
+          <Section4Content>
+            <h3>Stack & Tool</h3>
+            <p>
+              HTML5 • CSS • JavaScript • JQuery •<br className="br_mobile"/>React.js • Next.js • Vue.js<br />
+              Figma • Adobe XD •<br className="br_mobile"/> Adobe illustrator • Adobe Photoshop
+            </p>
+          </Section4Content>
+        </Inner>
+      </Section4>
     </main>
   );
 }
