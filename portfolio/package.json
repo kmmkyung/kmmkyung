@@ -14,7 +14,7 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.1",
     "react-scripts": "5.0.1",
-    "styled-components": "^6.1.19",
+    "sass": "^1.89.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -40,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/styled-components": "^5.1.34"
   }
 }

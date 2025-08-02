@@ -1,10 +1,10 @@
-import projectDate from "data/projectDate";
-import { Link } from "react-router-dom";
-import styled from "styled-components"
-import { IProjectData } from "type";
+@use '../../styles/base/base';
+@use '../../styles/abstracts/mixins';
 
-const ProjectContainer = styled.div<{ $lastProject?: boolean }>`
-  color: var(--black);
+
+.projectContainer {
+  color: base.$color-black;
+}
 
   ${({ $lastProject }) => $lastProject && `
     margin-left: auto;
@@ -77,26 +77,3 @@ const ProjectDescription = styled.p`
   font-size: var(--font-size-s);
   margin-top: clamp(0.8rem, 1.5vw, 1rem);
 `;
-
-export default function ProjectItem({project, lastProject = false}:{project:IProjectData, lastProject?:boolean}) {
-  
-  return (
-    <ProjectContainer $lastProject={lastProject}>
-      <ProjectNumber>PROJECT {project.id}</ProjectNumber>
-      <Link to={!lastProject ? `/Project/${project.id}` : ''}>
-        <ProjectContent $lastProject={lastProject}>
-          {project.boxType === 'text' ? 
-            <>
-              <ProjectText1>{project.boxText_1}</ProjectText1>
-              {project.boxText_2 && <ProjectText2 dangerouslySetInnerHTML={{ __html: project.boxText_2 }}/>}
-            </>
-            :
-            <ProjectLogo src={project.boxImage} alt={project.boxImageAlt} />
-          }
-        </ProjectContent>
-        <ProjectTitle>{project.title}</ProjectTitle>
-        <ProjectDescription dangerouslySetInnerHTML={{ __html: project.info }} />
-      </Link>
-    </ProjectContainer>
-  )
-}
