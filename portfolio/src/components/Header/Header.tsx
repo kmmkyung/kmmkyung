@@ -37,6 +37,7 @@ export default function Header() {
       valueWords.forEach((ele)=>{
         const span = document.createElement("span");
         span.className = styles.menuWord;
+        span.classList.add('menuWord');
         if( location.pathname !== "/" && index === 1 ){
           span.classList.add(styles.gradientText);
         }
@@ -49,10 +50,10 @@ export default function Header() {
       defaults: { ease: "power4.inOut" }, // 모든 요소 적용
       repeat: -1, yoyo: true }  // 무한 반복 , 앞뒤반복
     )
-    timeline.from('.menu-word', { // 초기값 설정
+    timeline.from('.menuWord', { // 초기값 설정
       y: 10, opacity: 0, skewX: 30, stagger: 0.03, duration: 1,
     })
-    .to('.menu-word',{ // 끝값 설정
+    .to('.menuWord',{ // 끝값 설정
       y: -10, skewX: 0, stagger:0.03, duration: 1,
     })
   },[location.pathname])
