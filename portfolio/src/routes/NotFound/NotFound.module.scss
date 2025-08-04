@@ -1,19 +1,20 @@
+@use '../../styles/base/base';
 
-// const SectionEl = styled.section`
-//   width: 100%;
-//   height: 100vh;
-// `;
+.notFound {
+  width: 100%;
+  height: 100vh;
 
-// const SectionInner = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
+  .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-//   p {
-//     font-size: var(--font-size-s);
-//     line-height: 1.8;
-//   }
-// `
+    p {
+    font-size: base.$font-size-s;
+    line-height: 1.8;
+    }
+  }
+}

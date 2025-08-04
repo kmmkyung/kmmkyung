@@ -1,0 +1,79 @@
+@use '../../styles/base/base';
+@use '../../styles/abstracts/mixins';
+
+
+.projectContainer {
+  color: base.$color-black;
+
+  & .lastProject {
+    margin-left: auto;
+    color: base.$color-white;
+  
+    @include mixins.MqDesktop {
+      margin: 0 auto;
+    }
+  }
+
+  .projectNumber {
+    font-size: base.$font-size-m;
+    color: base.$color-gray_a;
+    font-weight: bold;
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .projectContent {
+    width: clamp(250px, 60vw, 500px);
+    height: auto;
+    aspect-ratio: 1 / 0.65;
+    padding: 25px;
+    position: relative;
+    border-radius: clamp(1.2rem, 2.5vw, 5rem);
+    background: linear-gradient(base.$color-gray_f5, #ffffff00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+    &.lastProject {
+      background: linear-gradient(base.$color-white, base.$color-black);
+    }
+
+    .projectText1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: base.$font-size-l;
+      font-size: clamp(1.8rem, 20vw, 15rem);
+      opacity: 0.5;
+    }
+
+    .projectText2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: base.$font-size-l;
+      text-align: center;
+    }
+
+    .projectLogo {
+      max-width: 150px;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  .projectTitle {
+    font-size: base.$font-size-l;
+    font-weight: bold;
+    margin-top: clamp(1rem, 2vw, 2rem);
+  }
+
+  .projectDescription {
+    font-size: base.$font-size-s;
+    margin-top: clamp(0.8rem, 1.5vw, 1rem);
+  
+  }
+}

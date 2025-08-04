@@ -1,60 +1,129 @@
+@use '../../styles/base/base';
+@use '../../styles/abstracts/mixins';
 
-// const Section1 = styled.section`
-//   width: 100%;
-//   height: 100vh;
-//   color: var(--white);
-//   position: sticky;
-//   top: 0;
-// `;
+.section1 {
+  background-color: base.$color-black;
+  width: 100%;
+  height: 100vh;
+  color: base.$color-white;
+  position: sticky;
+  top: 0;
 
-// const Inner = styled.div`
-//   ${innerStyle}
-// `
+  .section1Inner {
+    @include mixins.innerStyle;
 
-// const LastProject = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-// `;
+    .lastProject {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
 
-// const PageTitle = styled.p`
-//   position: absolute;
-//   bottom: min(3.5vw, 20px);
-//   font-weight: normal;
-//   font-size: var(--font-size-s);
-//   color: var(--gray_a);
-//   line-height: 2;
-// `;
+    .pageTitle {
+      position: absolute;
+      bottom: min(3.5vw, 20px);
+      font-weight: normal;
+      font-size: base.$font-size-s;
+      color: base.$color-gray_a;
+      line-height: 2;
+    }
+  }
+}
 
-// const Section2 = styled.section`
-//   background-color: var(--white);
-//   border-radius: 4rem 4rem 0 0;
-//   overflow: hidden;
-//   position: relative;
-//   z-index: 2;
-//   height: 100vh;
-// `
+.section2 {
+  background-color: base.$color-white;
+  border-radius: 4rem 4rem 0 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
 
-// const Section2Inner = styled(Inner)`
-//   padding: 0;
-// `;
+  .inner {
+    @include mixins.innerStyle;
+    padding: 0;
 
-// const ProjectList = styled.div`
-//   width: fit-content;
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-//   gap: min(10vw, 10rem);
-//   padding: 0 10rem;
-// `;
+    .projectList {
+      width: fit-content;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: min(10vw, 10rem);
+      padding: 0 10rem;
+    }
+  }
+}
 
-// const Section3 = styled.section``;
+.section3{
+  background-color: base.$color-black;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 
-// const Section3Content = styled.div`
-// `;
+  .inner {
+    @include mixins.innerStyle;
 
-// const Section4 = styled.section``;
+    .section3Content {
+      min-height: 400px;
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      gap: min(10vw, 200px);
 
-// const Section4Content = styled.div`
-// `;
+      @include mixins.MqTablet {
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      h3 {
+        font-weight: bold;
+        font-size: base.$font-size-l;
+      }
+
+      p {
+        font-size: base.$font-size-m;
+        text-align: center;
+        word-break: keep-all;
+      }
+    }
+  }
+}
+
+.section4 {
+  background-color: base.$color-white;
+  position: relative;
+  z-index: 2;
+  color: base.$color-black;
+
+  .inner {
+    @include mixins.innerStyle;
+
+    .section4Content {
+      min-height: 400px;
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      gap: min(10vw, 200px);
+
+      @include mixins.MqTablet {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      h3 {
+        font-size: base.$font-size-l;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: base.$font-size-m;
+        text-align: center;
+        word-break: keep-all;
+        line-height: 2;
+      }
+    }
+  }
+}

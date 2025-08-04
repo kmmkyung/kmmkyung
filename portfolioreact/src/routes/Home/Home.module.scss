@@ -1,0 +1,61 @@
+@use '../../styles/base/base';
+@use '../../styles/abstracts/mixins';
+
+.section1 {
+  width: 100%;
+  height: 100vh;
+  color: var(--white);
+  position: sticky;
+  top: 0;
+
+  .section1Inner {
+    @include mixins.innerStyle;
+
+    .lastProject {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .pageTitle {
+      position: absolute;
+      bottom: min(3.5vw, 20px);
+      font-weight: normal;
+      font-size: base.$font-size-s;
+      color: base.$color-gray_a;
+      line-height: 2;
+    }
+  }
+}
+
+.section2 {
+  background-color: var(--white);
+  border-radius: 4rem 4rem 0 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+}
+
+// const Section2 = styled.section`
+//   background-color: var(--white);
+//   border-radius: 4rem 4rem 0 0;
+//   overflow: hidden;
+//   position: relative;
+//   z-index: 2;
+//   height: 100vh;
+// `
+
+// const Section2Inner = styled(Inner)`
+//   padding: 0;
+// `;
+
+// const ProjectList = styled.div`
+//   width: fit-content;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   gap: min(10vw, 10rem);
+//   padding: 0 10rem;
+// `;

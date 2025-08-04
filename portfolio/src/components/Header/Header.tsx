@@ -1,14 +1,14 @@
+import { forwardRef } from "react";
 import styles from "./Header.module.scss";
-import svgLogo from "data/svgLogo";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import svgLogo from "../../data/svgLogo";
 
-export default function Header() {
+const Header = forwardRef<HTMLDivElement, {}>(function Header(_, ref: React.ForwardedRef<HTMLDivElement>)  {
   const homeMenu = ['PROJECT', 'ABOUT', 'CONTACT'];
   const projectMenu = ['HOME', '🔗VISIT_SITE', 'CONTACT'];
   const location = useLocation(); 
-  const headerLogoRef = useRef<HTMLDivElement>(null);
   const menuItemRef = useRef<HTMLLIElement[]>([]);
 
   function windowTop(){
@@ -24,8 +24,8 @@ export default function Header() {
 
   useEffect(()=>{
     // logo svg
-    if (headerLogoRef.current) {
-      headerLogoRef.current.innerHTML = svgLogo.pageLogo_w;
+    if (ref && typeof ref !== "function" && ref.current) {
+      ref.current.innerHTML = svgLogo.pageLogo_w;
     }
 
     // menu word split and save
@@ -61,7 +61,7 @@ export default function Header() {
   return (
     <header>
       <div className={styles.headerInner}>
-        <div className={styles.headerLogo} ref={headerLogoRef} onClick={windowTop}/>
+        <div className={styles.headerLogo} ref={ref} onClick={windowTop}/>
         <nav>
         { location.pathname === "/" ?
           <ol className={styles.navList}>
@@ -80,4 +80,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+})
+
+export default Header;

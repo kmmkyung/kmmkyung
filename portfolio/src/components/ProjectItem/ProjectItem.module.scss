@@ -5,7 +5,7 @@
 .projectContainer {
   color: base.$color-black;
 
-  & .lastProject {
+  &.lastProject {
     margin-left: auto;
     color: base.$color-white;
   
@@ -54,6 +54,7 @@
       transform: translate(-50%, -50%);
       font-size: base.$font-size-l;
       text-align: center;
+      opacity: 1;
     }
 
     .projectLogo {
@@ -73,7 +74,14 @@
 
   .projectDescription {
     font-size: base.$font-size-s;
-    margin-top: clamp(0.8rem, 1.5vw, 1rem);
-  
+    margin: clamp(0.8rem, 1.5vw, 1rem) 0;
+  }
+
+  .stackSvg {
+    border-top: 1px solid base.$color-gray_d;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: clamp(0.8rem, 1.5vw, 1rem) 0;
   }
 }

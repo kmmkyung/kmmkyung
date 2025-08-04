@@ -1,0 +1,21 @@
+@use '../../styles/base/base';
+
+@mixin innerStyle {
+  width: 100%;
+  height: 100%;
+  max-width: base.$max-width;
+  margin: 0 auto;
+  padding: base.$default-padding;
+}
+
+@mixin MqDesktop {
+  @media (max-width: base.$breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin MqTablet {
+  @media (max-width: base.$breakpoint-tablet) {
+    @content;
+  }
+}

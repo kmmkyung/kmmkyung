@@ -1,6 +1,17 @@
 @use '../../styles/base/base';
 @use '../../styles/abstracts/mixins';
 
+:global(.white){
+  fill: base.$color-white;
+  color: base.$color-white;
+}
+
+:global(.black){
+  fill: base.$color-black;
+  color: base.$color-black;
+}
+
+
 @keyframes gradientMove{
   0% {
     background-position: 0% 50%;
@@ -37,6 +48,10 @@ header{
       width: 100%;
       aspect-ratio: 1 / 1;
       transition: all 0.5s;
+
+      & .white {
+        fill: #fff
+      }
     }
   }
 
@@ -46,7 +61,7 @@ header{
     gap: 30px;
 
     .navItem {
-      color: var(--white);
+      color: base.$color-white;
       font-size: base.$font-size-m;
       cursor: pointer;
 
@@ -67,7 +82,3 @@ header{
     }
   }
 }
-
-
-
-
