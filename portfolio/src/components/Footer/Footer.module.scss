@@ -32,26 +32,26 @@ footer {
         gap: 50px;
         color: base.$color-white;
 
-        h2 {
-          font-size: clamp(40px, 15vw, 100rem);
-          font-weight: bold;
-        }
+      h2 {
+        font-size: clamp(40px, 15vw, 100rem);
+        font-weight: bold;
+      }
 
-        h3 {
-          width: 100%;
+      h3 {
+        width: 100%;
+        font-size: base.$font-size-m;
+        }
+      
+        a{
           font-size: base.$font-size-m;
+          &:hover{
+          text-decoration: underline;
           }
-        
-          a{
-            font-size: base.$font-size-m;
-            &:hover{
-            text-decoration: underline;
-            }
-          }
-        
-          p{
-            font-size: base.$font-size-s;
-          }
+        }
+      
+        p{
+          font-size: base.$font-size-s;
+        }
       }
     }
   }

@@ -13,4 +13,5 @@ export interface IProjectData {
   site: string,
   description: string,
   images: string[]
+  stickyVisual?: string
 }

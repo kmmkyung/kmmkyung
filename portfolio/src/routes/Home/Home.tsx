@@ -6,9 +6,10 @@ import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
-import projectDate from "../../data/projectDate";
+import projectDate from "../../data/projectData";
 import styles from "./Home.module.scss";
 import ProjectItemStyles from "../../components/ProjectItem/ProjectItem.module.scss";
+import projectData from "../../data/projectData";
 
 type ContextType = {
   headerLogoRef: RefObject<HTMLDivElement>;
@@ -24,6 +25,7 @@ export default function Home(){
   const section3Ref = useRef<HTMLDivElement>(null);
   const section4Ref = useRef<HTMLDivElement>(null);
   const lastProjectRef = useRef<HTMLDivElement | null>(null);
+  const projectDataReverse = [...projectDate].reverse();
 
   // header - svg color change on scroll
   useEffect(()=>{
@@ -146,16 +148,13 @@ export default function Home(){
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
-  
-  
 
-  const projectDateReverse = [...projectDate].reverse();
   return (
     <main>
-      <section className={styles.section1} ref={section1Ref}>
+      <section className={`${styles.section1} section1`} ref={section1Ref}>
         <div className={styles.section1Inner}>
           <div className={styles.lastProject} ref={lastProjectRef}>
-            <ProjectItem project={projectDate[projectDate.length-1]} lastProject={true}/>
+            <ProjectItem project={projectData[projectData.length-1]} lastProject={true}/>
           </div>
           <p className={styles.pageTitle}>
             <span>Portfolio</span><br/>
@@ -166,7 +165,7 @@ export default function Home(){
       <section className={styles.section2} ref={section2Ref}>
         <div className={styles.inner}>
           <div className={styles.projectList}>
-            {projectDateReverse.map((project) => (
+            {projectDataReverse.map((project) => (
               <ProjectItem key={project.id} project={project} />
             ))}
           </div>

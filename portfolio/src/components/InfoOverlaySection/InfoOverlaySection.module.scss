@@ -1,0 +1,50 @@
+@use '../../styles/base/base';
+@use '../../styles/abstracts/mixins';
+
+.infoOverlay {
+  background: base.$color-black;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: 100%;
+
+  .inner {
+    @include mixins.innerStyle;
+    padding-top: 30vh;
+
+    .title {
+      font-size: base.$font-size-l;
+    }
+
+    .meta {
+      border-top: 1px solid base.$color-white;
+      margin-top: 20px;
+      padding-top: 20px;
+      font-size: base.$font-size-s;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 10px;
+      
+      @include mixins.MqTablet {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .metaText{
+
+        .stack {}
+        .mediaQuery {}
+      }
+
+      .link {
+        font-size: base.$font-size-s;
+        &:hover {
+          text-decoration: underline;
+        }
+    }
+    }
+  }
+}

@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import styles from "./Home/Home.module.scss";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     function handleScroll() {
-      const section1 = document.querySelector(`.${styles.section1}`) as HTMLElement;
+      const section1 = document.querySelector(".section1") as HTMLElement;
       const main = document.querySelector("main");
       const footer = document.querySelector("footer");
 
