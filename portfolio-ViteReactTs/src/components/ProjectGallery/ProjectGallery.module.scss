@@ -1,0 +1,40 @@
+@use '../../styles/base/base';
+@use '../../styles/abstracts/mixins';
+
+.projectGalleryContainer {
+  width: fit-content;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: min(10vw, 10rem);
+  @include mixins.MqTablet {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.projectGalleryContent {
+  object-fit: cover;
+}
+
+.projectImg {
+  aspect-ratio: 720 / 403;
+  width: 70vw;
+  height: auto;
+
+  @include mixins.MqTablet {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.videoPc {
+  object-position: top;
+  width: 70vw;
+  height: auto;
+
+  @include mixins.MqTablet {
+    width: 100%;
+    height: auto;
+  }
+}
