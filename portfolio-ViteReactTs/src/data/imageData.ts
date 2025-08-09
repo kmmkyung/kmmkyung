@@ -36,18 +36,27 @@ import project4Img03 from '@/assets/images/project-04/lofi_6.png';
 import project4VideoPc from '@/assets/video/project-04/lofi-pc.mov';
 import project4VideoMobile from '@/assets/video/project-04/lofi-mobile.mov';
 
-
 // Dalba
 import project5Logo from '@/assets/svg/Dalba/Dalba_B.svg';
 import project5Pc from '@/assets/images/project-05/dalba_pc.png';
 import project5Mobile from '@/assets/images/project-05/dalba_mobile.png';
 import project5StickyVisual from '@/assets/images/project-05/stickyVisual.jpg';
+import project5Img01 from '@/assets/images/project-05/dalba_1.png';
+import project5Img02 from '@/assets/images/project-05/dalba_2.png';
+import project5Img03 from '@/assets/images/project-05/dalba_3.png';
+import project5Img04 from '@/assets/images/project-05/dalba_4.png';
+import project5Img05 from '@/assets/images/project-05/dalba_5.png';
 
 // Disney
 import project6Logo from '@/assets/svg/Disney.svg';
 import project6Pc from '@/assets/images/project-06/disney_pc.png';
 import project6Mobile from '@/assets/images/project-06/disney_mobile.png';
 import project6StickyVisual from '@/assets/images/project-06/stickyVisual.jpg';
+import project6Img01 from '@/assets/images/project-06/disney_1.png';
+import project6Img02 from '@/assets/images/project-06/disney_2.png';
+import project6Img03 from '@/assets/images/project-06/disney_3.png';
+import project6Img04 from '@/assets/images/project-06/disney_4.png';
+import project6Img05 from '@/assets/images/project-06/disney_5.png';
 
 // Carrot Market
 import project7Pc from '@/assets/images/project-07/carrot_pc.png';
@@ -97,25 +106,25 @@ const imageData = {
   project5: {
     logo: project5Logo,
     stickyVisual: project5StickyVisual,
-    pc: project1Pc,
-    module: project1Mobile,
-    gallery: [],
-    videoPc: project2VideoPc,
-    videoMobile: project2VideoMobile
+    pc: project5Pc,
+    module: project5Mobile,
+    gallery: [project5Img01, project5Img02, project5Img03, project5Img04, project5Img05],
+    videoPc: project4VideoPc,
+    videoMobile: project4VideoPc
   },
   project6: {
     logo: project6Logo,
     stickyVisual: project6StickyVisual,
-    pc: project1Pc,
-    module: project1Mobile,
-    gallery: [],
+    pc: project6Pc,
+    module: project6Mobile,
+    gallery: [project6Img01, project6Img02, project6Img03, project6Img04, project6Img05],
     videoPc: project2VideoPc,
     videoMobile: project2VideoMobile
   },
   project7: {
     stickyVisual: project7StickyVisual,
-    pc: project1Pc,
-    module: project1Mobile,
+    pc: project7Pc,
+    module: project7Mobile,
     gallery: [],
     videoPc: project2VideoPc,
     videoMobile: project2VideoMobile
