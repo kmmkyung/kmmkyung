@@ -46,6 +46,8 @@ import project5Img02 from '@/assets/images/project-05/dalba_2.png';
 import project5Img03 from '@/assets/images/project-05/dalba_3.png';
 import project5Img04 from '@/assets/images/project-05/dalba_4.png';
 import project5Img05 from '@/assets/images/project-05/dalba_5.png';
+import project5VideoPc from '@/assets/video/project-05/dalba-pc.mov';
+import project5VideoMobile from '@/assets/video/project-05/dalba-mobile.mov';
 
 // Disney
 import project6Logo from '@/assets/svg/Disney.svg';
@@ -57,11 +59,20 @@ import project6Img02 from '@/assets/images/project-06/disney_2.png';
 import project6Img03 from '@/assets/images/project-06/disney_3.png';
 import project6Img04 from '@/assets/images/project-06/disney_4.png';
 import project6Img05 from '@/assets/images/project-06/disney_5.png';
+import project6VideoPc from '@/assets/video/project-06/disney-pc.mov';
+import project6VideoMobile from '@/assets/video/project-06/disney-mobile.mov';
 
 // Carrot Market
 import project7Pc from '@/assets/images/project-07/carrot_pc.png';
 import project7Mobile from '@/assets/images/project-07/carrot_mobile.png';
 import project7StickyVisual from '@/assets/images/project-07/stickyVisual.jpg';
+import project7Img01 from '@/assets/images/project-07/carrot_1.png';
+import project7Img02 from '@/assets/images/project-07/carrot_2.png';
+import project7Img03 from '@/assets/images/project-07/carrot_3.png';
+import project7Img04 from '@/assets/images/project-07/carrot_4.png';
+import project7Img05 from '@/assets/images/project-07/carrot_5.png';
+import project7VideoPc from '@/assets/video/project-07/carrot-pc.mov';
+import project7VideoMobile from '@/assets/video/project-07/carrot-mobile.mov';
 
 const imageData = {
   project1: {
@@ -109,8 +120,8 @@ const imageData = {
     pc: project5Pc,
     module: project5Mobile,
     gallery: [project5Img01, project5Img02, project5Img03, project5Img04, project5Img05],
-    videoPc: project4VideoPc,
-    videoMobile: project4VideoPc
+    videoPc: project5VideoPc,
+    videoMobile: project5VideoMobile
   },
   project6: {
     logo: project6Logo,
@@ -118,16 +129,16 @@ const imageData = {
     pc: project6Pc,
     module: project6Mobile,
     gallery: [project6Img01, project6Img02, project6Img03, project6Img04, project6Img05],
-    videoPc: project2VideoPc,
-    videoMobile: project2VideoMobile
+    videoPc: project6VideoPc,
+    videoMobile: project6VideoMobile
   },
   project7: {
     stickyVisual: project7StickyVisual,
     pc: project7Pc,
     module: project7Mobile,
-    gallery: [],
-    videoPc: project2VideoPc,
-    videoMobile: project2VideoMobile
+    gallery: [project7Img01, project7Img02, project7Img03, project7Img04, project7Img05],
+    videoPc: project7VideoPc,
+    videoMobile: project7VideoMobile
   },
 }
 
