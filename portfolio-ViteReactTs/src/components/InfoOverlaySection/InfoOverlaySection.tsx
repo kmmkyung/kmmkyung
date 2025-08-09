@@ -26,7 +26,7 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
     tl.fromTo(
       overlayRef.current,
       { width: "0%" },
-      { width: "100%", duration: 0.8 }
+      { width: "100%", duration: 0.8, ease: "power2.inOut" }
     );
     tl.from(
       textTitleRef.current,

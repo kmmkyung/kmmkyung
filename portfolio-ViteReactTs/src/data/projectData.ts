@@ -35,7 +35,10 @@ const projectData :IProjectData[] = [
     site: 'https://kmmkyung.github.io/PJ-ZORA/',
     description: 'ZORA 공식 웹사이트를 클론하여 React로 구조화한 SPA(싱글 페이지 어플리케이션)입니다.<br/>페이지 퍼블리싱뿐 아니라, 상품 목록 렌더링과 장바구니 기능까지 구현하였습니다.<br/>상태 관리는 React와 localStorage를 활용해, 로컬 환경에서 실제처럼 동작하도록 만들었습니다.',
     stickyVisual: imageData.project2.stickyVisual,
-    images: imageData.project2.gallery
+    images: imageData.project2.gallery,
+    videoPc: imageData.project2.videoPc,
+    videoMobile: imageData.project2.videoMobile,
+    videoMobileBgColor: '#F51C3C',
   },
   { id: 3,
     boxType: 'image',
@@ -46,9 +49,13 @@ const projectData :IProjectData[] = [
     stack: ['React', 'HTML', 'CSS', 'JavaScript'],
     stackSvg: [stackData.react, stackData.html, stackData.sass, stackData.js],
     mediaQuery: ['DeskTop', 'Tablet'],
-    site: 'https://kmmkyung.github.io/kmmkyung/',
-    description:``,
-    images: imageData.project3.gallery
+    site: '',
+    description: '',
+    stickyVisual: '',
+    images: [],
+    videoPc: '',
+    videoMobile: '',
+    videoMobileBgColor: '#000000',
   },
   { id: 4,
     boxType: 'image',
@@ -62,7 +69,10 @@ const projectData :IProjectData[] = [
     site: 'https://kmmkyung.github.io/PJ-LOFI/',
     description: 'LO-FI Wines 공식 웹사이트를 클론하여 Vue.js로 구조화한 SPA(싱글 페이지 어플리케이션)입니다.<br/>상품 목록과 상세 페이지를 포함한 전체 퍼블리싱 및 데이터 렌더링을 직접 구현했습니다.<br/>회사별 와인을 필터링할 수 있는 기능도 포함하여, 실제 서비스처럼 동작하도록 개발하였습니다.',
     stickyVisual: imageData.project4.stickyVisual,
-    images: imageData.project4.gallery
+    images: imageData.project4.gallery,
+    videoPc: imageData.project4.videoPc,
+    videoMobile: imageData.project4.videoMobile,
+    videoMobileBgColor: '#eae2cf'
   },
   { id: 5,
     boxType: 'image',
@@ -76,7 +86,10 @@ const projectData :IProjectData[] = [
     site: 'https://kmmkyung.github.io/PJ-Dalba/',
     description: 'Vanilla JS 기반의 반응형 화장품 쇼핑몰 제품 리스트 페이지를 퍼블리싱 및 개발하였습니다.<br/>미디어쿼리에 따라 각 섹션의 배경 이미지를 변경하고, GSAP + ScrollTrigger를 활용해 가로 스크롤 애니메이션과 스크롤 기반 등장 효과를 구현했습니다.<br/>itemData를 기반으로 동적 필터 태그 생성, 정렬 기능, 카테고리 및 서브카테고리 필터링, 페이지네이션 등을 JavaScript로 직접 처리하였습니다.<br/>URL 쿼리스트링 파싱을 통해 사용자 선택 상태를 반영하고, 클릭 이벤트에 따라 실시간으로 상품 데이터를 필터링하여 렌더링합니다.<br/>*로그인, 장바구니, 검색 기능은 포함되어 있지 않으며, 프론트엔드 UI/UX 구현과 필터링 로직 중심으로 개발된 프로젝트입니다.*',
     stickyVisual: imageData.project5.stickyVisual,
-    images: imageData.project5.gallery
+    images: imageData.project5.gallery,
+    videoPc: imageData.project5.videoPc,
+    videoMobile: imageData.project5.videoMobile,
+    videoMobileBgColor: '#D5AE6B'
   },
   { id: 6,
     boxType: 'image',
@@ -90,7 +103,10 @@ const projectData :IProjectData[] = [
     site: 'https://react-disneyplus-app-6c3fc.web.app/',
     description: 'TMDB API를 활용해 React 기반의 Disney Plus 클론 SPA를 개발하였습니다.<br/>Firebase Auth를 이용해 이메일/비밀번호 로그인과 GitHub OAuth 로그인을 구현했으며, 로그인 상태와 사용자 정보를 Recoil 전역 상태로 관리합니다.<br/>특히 Recoil의 atom을 활용해 검색 중 상태, 검색어, 검색 결과, 그리고 로그인 사용자 정보를 체계적으로 정의하였습니다.<br/>React Query를 사용해 TMDB API에서 다양한 영화 데이터를 비동기적으로 패칭하고, 배너와 카테고리별 영화 리스트를 효율적으로 렌더링하였습니다.<br/>검색 페이지는 디바운싱 처리된 실시간 검색 기능을 제공하며, backdrop 이미지가 존재하는 결과만 필터링하여 보여줍니다.<br/>Styled-components로 반응형 UI를 구성하였으며, framer-motion을 활용해 애니메이션 효과를 더했습니다.',
     stickyVisual: imageData.project6.stickyVisual,
-    images: imageData.project6.gallery
+    images: imageData.project6.gallery,
+    videoPc: imageData.project6.videoPc,
+    videoMobile: imageData.project6.videoMobile,
+    videoMobileBgColor: '#0A7E8C'
   },
   { id: 7,
     boxType: 'text',
@@ -104,7 +120,10 @@ const projectData :IProjectData[] = [
     site: 'https://carrot-market-flame.vercel.app/',
     description: 'Next.js 기반으로 개발된 중고 거래 플랫폼 클론 프로젝트로, 데이터베이스는 Neon을 사용하며 ORM으로 Prisma를 도입해 쿼리 관리를 구현했습니다.<br/>메인 페이지 데스크톱 환경에서는 Matter.js 물리 엔진을 활용해 배경 클릭 시 당근과 토끼 이미지가 떨어지는 인터랙티브 효과를 적용했습니다.<br/>로그인 기능은 이메일, GitHub, Google, 카카오톡 OAuth를 구현하여 인증 후 사용자 정보를 받아 신규 등록 또는 로그인 처리를 수행합니다.<br/>상품 등록 시에는 Cloudinary에 이미지를 선 업로드하여 secure URL을 받아 미리보기로 제공하고, 이후 form 제출 시 해당 URL을 서버 액션으로 전달하는 구조로 이미지 관리를 구현했습니다.<br/>상품 상세 페이지에서는 Supabase Realtime 기반 실시간 채팅 기능을 제공하며, 채팅방 존재 여부에 따라 거래방이 자동 생성 및 이동되고, 거래 완료 시 상대방에 대한 리뷰 작성 기능도 포함되어 있습니다.',
     stickyVisual: imageData.project7.stickyVisual,
-    images: imageData.project7.gallery
+    images: imageData.project7.gallery,
+    videoPc: imageData.project7.videoPc,
+    videoMobile: imageData.project7.videoMobile,
+    videoMobileBgColor: '#f97316'
   },
 ]
 

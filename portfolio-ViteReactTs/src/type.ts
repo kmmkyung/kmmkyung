@@ -13,8 +13,8 @@ export interface IProjectData {
   site: string,
   description: string,
   images: string[]
-  stickyVisual?: string
-  videoPc?: string
-  videoMobile?: string
-  videoMobileBgColor?: string
+  stickyVisual: string
+  videoPc: string
+  videoMobile: string
+  videoMobileBgColor: string
 }

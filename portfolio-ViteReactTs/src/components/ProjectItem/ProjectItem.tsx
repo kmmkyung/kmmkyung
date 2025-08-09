@@ -3,11 +3,14 @@ import styles from "./ProjectItem.module.scss";
 import { Link } from "react-router-dom";
 
 export default function ProjectItem({project, lastProject = false}:{project:IProjectData, lastProject?:boolean}) {
+  const projectNoUrl = project.site == "";
+  const projectUrl = lastProject || projectNoUrl ? location.pathname : `/Project/${project.id}`;
 
   return (
     <div className={`${styles.projectContainer} ${lastProject ? styles.lastProject : ''}`}>
       <h6 className={styles.projectNumber}>PROJECT {project.id}</h6>
-        <Link to={!lastProject ? `/Project/${project.id}` : ''}>
+        <Link to={projectUrl} tabIndex={lastProject || projectNoUrl ? -1 : 0} onClick={(e) => { if (lastProject || projectNoUrl) e.preventDefault(); }}
+        >
         <div className={`${styles.projectContent} ${lastProject ? `${styles.lastProject}` : ''}`}>
             {project.boxType === 'text' ? 
               <>

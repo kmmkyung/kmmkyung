@@ -18,9 +18,7 @@
       top: calc(35vh - base.$font-size-l );
       position: absolute;
       height: calc(65vh + 80px + 2vw + (2*clamp(2rem, 5vw, 3rem)));
-      @include mixins.MqTablet {
-        height: calc(65vh + (40px + 1vw) + (2*clamp(2rem, 5vw, 3rem)));
-      }
+
       .title {
         line-height: 1;
         color: base.$color-white;

@@ -9,7 +9,9 @@ export default function ProjectGallery({ projectData }: { projectData:IProjectDa
           <img className={`${styles.projectImg} ${styles.projectGalleryContent}`} key={index} src={image} />
         )
       })}
-      <video className={`${styles.videoPc} ${styles.projectGalleryContent}`} src={projectData.videoPc} autoPlay loop muted playsInline />
+      <div className={styles.videoPcContainer}>
+        <video className={`${styles.videoPc} ${styles.projectGalleryContent}`} src={projectData.videoPc} loop muted playsInline />
+      </div>
     </div>
   );
 }

@@ -28,13 +28,17 @@
   }
 }
 
-.videoPc {
-  object-position: top;
+.videoPcContainer {
   width: 70vw;
   height: auto;
-
   @include mixins.MqTablet {
     width: 100%;
     height: auto;
   }
+  .videoPc {
+    object-position: top;
+    width: 100%;
+    height: 100%;
+  
+}
 }
