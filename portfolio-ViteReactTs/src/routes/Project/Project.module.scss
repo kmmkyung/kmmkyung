@@ -1,6 +1,11 @@
 @use '../../styles/base/base';
 @use '../../styles/abstracts/mixins';
 
+.section1 {
+  width: 100%;
+  height: 100vh;
+}
+
 .section2 {
   background-color: base.$color-black;
   border-radius: 4rem 4rem 0 0;

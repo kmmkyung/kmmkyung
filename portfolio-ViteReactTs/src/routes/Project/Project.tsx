@@ -155,9 +155,10 @@ export default function Project(){
   }
   return (
     <main>
-      <InfoOverlaySection projectData={project}/>
-      <StickyVisualSection projectData={project}/>
-      <section className={`section1`}></section>
+      <section className={`section1`}>
+        <InfoOverlaySection projectData={project}/>
+        <StickyVisualSection projectData={project}/>
+      </section>
       <section className={styles.section2}>
         <div className={styles.projectText}>
           <div className={styles.inner}>
