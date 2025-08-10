@@ -10,7 +10,7 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
 
   const stack = projectData.stack.join(' / ')
   const media = projectData.mediaQuery.join(' / ')
-  const overlayRef = useRef(null);
+  const maskRef = useRef(null);
   const textTitleRef = useRef(null);
   const textLine = useRef(null);
   const textRef = useRef(null);
@@ -24,7 +24,7 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
     });
 
     tl.fromTo(
-      overlayRef.current,
+      maskRef.current,
       { width: "0%" },
       { width: "100%", duration: 1, ease: "power2.inOut" }
     );
@@ -47,13 +47,14 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
   },[])
 
   return (
-    <div className={styles.infoOverlay} ref={overlayRef}>
+    <div className={styles.infoOverlay}>
+      <div ref={maskRef} className={styles.mask} />
       <div className={styles.inner}>
         <div className={styles.titleContainer}>
-          <h2 className={styles.title} ref={textTitleRef}>{projectData.title}</h2>
+          <h2 ref={textTitleRef} className={styles.title}>{projectData.title}</h2>
         </div>
-        <div className={styles.meta} ref={textRef}>
-          <div className={styles.line} ref={textLine}/>
+        <div ref={textRef} className={styles.meta}>
+          <div ref={textLine} className={styles.line} />
           <div className={styles.metaText}>
             <div>
               <p>Stack: {stack}</p>
@@ -64,5 +65,5 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
         </div>
       </div>
     </div>
-  );
+  )
 }

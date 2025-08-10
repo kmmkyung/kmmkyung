@@ -2,13 +2,19 @@
 @use '../../styles/abstracts/mixins';
 
 .infoOverlay {
-  background: base.$color-black;
   color: white;
   z-index: 3;
-  position: absolute;
   top: 0;
   height: 55vh;
   width: 100%;
+  position: absolute;
+  
+  .mask {
+    background: base.$color-black;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+  }
 
   .inner {
     @include mixins.innerStyle;
@@ -31,6 +37,8 @@
     .meta {
       margin-top: 20px;
       font-size: base.$font-size-s;
+      position: relative;
+      z-index: 2;
 
       .line {
         border-top: 1px solid base.$color-white;
