@@ -8,65 +8,62 @@ import { useRef } from "react";
 export default function InfoOverlaySection({ projectData }: { projectData: IProjectData }) {
   gsap.registerPlugin(useGSAP);
 
-  const stack = projectData.stack.join(' / ')
-  const media = projectData.mediaQuery.join(' / ')
-  const maskRef = useRef(null);
-  const textTitleRef = useRef(null);
-  const textLine = useRef(null);
-  const textRef = useRef<HTMLDivElement>(null);
+  const stack = projectData.stack.join(" / ");
+  const media = projectData.mediaQuery.join(" / ");
 
-  useGSAP(()=>{
-    if(!maskRef.current || !textTitleRef.current || !textRef.current || !textLine.current) return;
-    document.body.style.overflow = "hidden";
-    const metaTextAndLine = textRef.current.querySelectorAll('p, a');
+  const scopeRef = useRef<HTMLDivElement | null>(null);
+  const maskRef = useRef<HTMLDivElement | null>(null);
 
-    const tl = gsap.timeline({
-      onComplete: () => { // 애니 끝나면 스크롤 다시 활성화
-        document.body.style.overflow = "auto";
-      }
-    });
+  useGSAP(() => {
+    if (!maskRef.current) return;
 
-    tl.fromTo(
-      maskRef.current,
-      { width: "0%" },
-      { width: "100%", duration: 1, ease: "power2.inOut" }
-    );
-    tl.fromTo(
-      textTitleRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1 },
-    );
-    tl.fromTo(
-      metaTextAndLine,
-      { opacity: 0 },
-      { opacity: 1, duration: 1 },
-      "-=0.5");
-    tl.fromTo(textLine.current,
-      { width: "0%" },
-      { width: "100%", duration: 0.5 }, "-=0.5");
+    const ctx = gsap.context(() => {
+      document.body.style.overflow = "hidden";
+
+      const tl = gsap.timeline({
+        defaults: { ease: "power2.inOut" },
+        onComplete: () => { document.body.style.overflow = "auto"; }
+      });
+
+      // 1) 마스크
+      tl.fromTo(
+        maskRef.current,
+        { width: "0%" },
+        { width: "100%", duration: 1 }
+      );
+
+      // 2) 텍스트들 (h2, p를 .fade로 묶어서 한 번에)
+      const fades = gsap.utils.toArray<HTMLElement>(`.${styles.fade}`);
+      tl.to(fades, { autoAlpha: 1, duration: 1, stagger: 0.15, immediateRender: false }, "-=0.5");
+
+      // 3) 라인
+      tl.to(`.${styles.line}`, { width: "100%", duration: 0.5 }, "-=0.5");
+    }, scopeRef);
+
     return () => {
+      ctx.revert();               // 인라인 스타일 복원
       document.body.style.overflow = "auto";
     };
-  },[])
+  }, { scope: scopeRef, dependencies: [], revertOnUpdate: true });
 
   return (
-    <div className={styles.infoOverlay}>
+    <div ref={scopeRef} className={styles.infoOverlay}>
       <div ref={maskRef} className={styles.mask} />
       <div className={styles.inner}>
         <div className={styles.titleContainer}>
-          <h2 ref={textTitleRef} className={styles.title}>{projectData.title}</h2>
+          <h2 className={`${styles.title} ${styles.fade}`}>{projectData.title}</h2>
         </div>
-        <div ref={textRef} className={styles.meta}>
-          <div ref={textLine} className={styles.line} />
+        <div className={styles.meta}>
+          <div className={styles.line} />
           <div className={styles.metaText}>
             <div>
-              <p>Stack: {stack}</p>
-              <p>Media Query: {media}</p>
+              <p className={styles.fade}>Stack: {stack}</p>
+              <p className={styles.fade}>Media Query: {media}</p>
             </div>
             <Link className={styles.link} to={projectData.site} target="_blank">Vite Site ↗</Link>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
