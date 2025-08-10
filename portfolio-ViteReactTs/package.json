@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postbuild": "cp dist/index.html dist/404.html && touch dist/.nojekyll"
+    "reset": "rm -rf ../portfolio/* && cp -R dist/* ../portfolio/ && cp ../portfolio/index.html ../404.html && touch ../.nojekyll",
+    "add": "git add ../portfolio ../404.html ../.nojekyll"
 
   },
   "dependencies": {
