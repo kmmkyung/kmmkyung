@@ -155,7 +155,8 @@ export default function Project(){
   return (
     <main>
       <InfoOverlaySection projectData={project}/>
-      <section className={`${styles.section1} section1`} style={{backgroundImage: `url(${project.stickyVisual})`, backgroundSize: 'cover', backgroundPosition: 'top'}}>
+      <section className={`${styles.section1} section1`}>
+        <img src={project.stickyVisual} alt={project.title} className={styles.cover} />
       </section>
       <section className={styles.section2}>
         <div className={styles.projectText}>
