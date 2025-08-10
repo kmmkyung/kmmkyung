@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "cp dist/index.html dist/404.html && touch dist/.nojekyll"
+
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

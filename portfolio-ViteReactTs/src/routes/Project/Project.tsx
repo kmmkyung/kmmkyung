@@ -3,7 +3,6 @@
 import { useParams } from "react-router-dom";
 import projectData from "../../data/projectData";
 import styles from "./Project.module.scss";
-import StickyVisualSection from "../../components/StickyVisualSection/StickyVisualSection";
 import InfoOverlaySection from "../../components/InfoOverlaySection/InfoOverlaySection";
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
@@ -155,9 +154,8 @@ export default function Project(){
   }
   return (
     <main>
-      <section className={`section1`}>
+      <section className={`${styles.section1} section1`} style={{background: project.stickyVisual}}>
         <InfoOverlaySection projectData={project}/>
-        <StickyVisualSection projectData={project}/>
       </section>
       <section className={styles.section2}>
         <div className={styles.projectText}>
