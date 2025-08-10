@@ -13,10 +13,13 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
   const maskRef = useRef(null);
   const textTitleRef = useRef(null);
   const textLine = useRef(null);
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useGSAP(()=>{
+    if(!maskRef.current || !textTitleRef.current || !textRef.current || !textLine.current) return;
     document.body.style.overflow = "hidden";
+    const metaTextAndLine = textRef.current.querySelectorAll('p, a');
+
     const tl = gsap.timeline({
       onComplete: () => { // 애니 끝나면 스크롤 다시 활성화
         document.body.style.overflow = "auto";
@@ -34,7 +37,7 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
       { opacity: 1, duration: 1 },
     );
     tl.fromTo(
-      textRef.current,
+      metaTextAndLine,
       { opacity: 0 },
       { opacity: 1, duration: 1 },
       "-=0.5");
