@@ -23,18 +23,24 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
       }
     });
 
-    tl.from(
+    tl.fromTo(
       maskRef.current,
-      { width: "0%", duration: 1, ease: "power2.inOut" }
+      { width: "0%" },
+      { width: "100%", duration: 1, ease: "power2.inOut" }
     );
-    tl.from(
+    tl.fromTo(
       textTitleRef.current,
-      { opacity: 0, duration: 1 },
+      { opacity: 0 },
+      { opacity: 1, duration: 1 },
     );
-    tl.from(
+    tl.fromTo(
       textRef.current,
-      { opacity: 0, duration: 1 }, "-=0.5");
-    tl.from(textLine.current, { width: "0%", duration: 0.5 }, "-=0.5");
+      { opacity: 0 },
+      { opacity: 1, duration: 1 },
+      "-=0.5");
+    tl.fromTo(textLine.current,
+      { width: "0%" },
+      { width: "100%", duration: 0.5 }, "-=0.5");
     return () => {
       document.body.style.overflow = "auto";
     };
