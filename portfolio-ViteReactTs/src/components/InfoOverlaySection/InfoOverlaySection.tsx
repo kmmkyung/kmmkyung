@@ -36,10 +36,11 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
     tl.fromTo(
       textRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 2 });
+      { opacity: 1, duration: 1 },
+      "-=0.5");
     tl.fromTo(textLine.current,
       { width: "0%" },
-      { width: "100%", duration: 0.5 });
+      { width: "100%", duration: 0.5 }, "-=0.5");
     return () => {
       document.body.style.overflow = "auto";
     };
