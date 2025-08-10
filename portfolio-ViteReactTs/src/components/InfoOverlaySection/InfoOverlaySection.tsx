@@ -32,16 +32,14 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
         { width: "100%", duration: 1 }
       );
 
-      // 2) 텍스트들 (h2, p를 .fade로 묶어서 한 번에)
       const fades = gsap.utils.toArray<HTMLElement>(`.${styles.fade}`);
       tl.to(fades, { autoAlpha: 1, duration: 1, stagger: 0.15, immediateRender: false }, "-=0.5");
 
-      // 3) 라인
       tl.to(`.${styles.line}`, { width: "100%", duration: 0.5 }, "-=0.5");
     }, scopeRef);
 
     return () => {
-      ctx.revert();               // 인라인 스타일 복원
+      ctx.revert();
       document.body.style.overflow = "auto";
     };
   }, { scope: scopeRef, dependencies: [], revertOnUpdate: true });
@@ -60,7 +58,7 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
               <p className={styles.fade}>Stack: {stack}</p>
               <p className={styles.fade}>Media Query: {media}</p>
             </div>
-            <Link className={styles.link} to={projectData.site} target="_blank">Vite Site ↗</Link>
+            <Link className={`${styles.fade} ${styles.link}`} to={projectData.site} target="_blank">Vite Site ↗</Link>
           </div>
         </div>
       </div>
