@@ -26,17 +26,17 @@ export default function InfoOverlaySection({ projectData }: { projectData: IProj
     tl.fromTo(
       overlayRef.current,
       { width: "0%" },
-      { width: "100%", duration: 0.8, ease: "power2.inOut" }
+      { width: "100%", duration: 1, ease: "power2.inOut" }
     );
     tl.fromTo(
       textTitleRef.current,
-      { opacity: 0, y: 20},
-      { opacity: 1, y: 0, duration: 1 },
+      { opacity: 0 },
+      { opacity: 1, duration: 1 },
     );
     tl.fromTo(
       textRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 1 },
+      { opacity: 0 },
+      { opacity: 1, duration: 1 },
       "-=0.5");
     tl.fromTo(textLine.current,
       { width: "0%" },
